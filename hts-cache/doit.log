@@ -1,8 +1,0 @@
--qwC2t%Ps2u1%s%uN0%I0p7DaK0H0%kf2A25000%f#f -F Java1.1.4 -%F "" -%l "en, *" https://agencyfy.webflow.io/ -O1 "C:\My Web Sites\2025_portfolio" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.min.js +*/spLit-type +*.webm +*.webp +*.mp4 +*/wp-content/* +*/wp-include/js/*
-File generated automatically on Tue, 15 Jul 2025 00:57:55, do NOT edit
-
-To update a mirror, just launch httrack without any parameters
-The existing cache will be used (and modified)
-To have other options, retype all parameters and launch HTTrack
-To continue an interrupted mirror, just launch httrack without any parameters
-
