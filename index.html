@@ -94,7 +94,35 @@
 
   <body>
     <div class="page-wrapper">
+      <!-- Preloader -->
+       <div class="loader-wrapper" id="preloader">
+  <span class="loader-letter">J</span>
+  <span class="loader-letter">A</span>
+  <span class="loader-letter">S</span>
+  <span class="loader-letter">O</span>
+  <span class="loader-letter">N</span>
+  <span class="loader-letter">G</span>
+  <span class="loader-letter">I</span>
+  <span class="loader-letter">T</span>
+  <span class="loader-letter">H</span>
+  <span class="loader-letter">U</span>
+  <span class="loader-letter">I</span>
+
+
+  <div class="loader"></div>
+       </div>
+       <script>
+        // Wait until everything loads
+window.onload = () => {
+  document.getElementById("preloader").style.opacity = "0";
+  setTimeout(() => {
+    document.getElementById("preloader").style.display = "none";
+  }, 1000);
+};
+       </script>
+
       <!-- <div id="particles-js"></div> -->
+
       <main class="main-wrapper home">
         <header class="section-home-header" id="header">
           <video
@@ -1399,8 +1427,8 @@
           </div>
         </div>
       </footer>
+   
     </div>
-
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       type="text/javascript"
