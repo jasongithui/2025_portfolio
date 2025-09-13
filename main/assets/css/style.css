@@ -5393,12 +5393,12 @@ blockquote {
 .gsap-selected {
   will-change: transform, opacity;
   display: inline-block;
-  transform: translateX(-55vw);
+
 }
 .gsap-projects {
   will-change: transform, opacity;
   display: inline-block;
-  transform: translateX(55vw);
+
 }
 .bottom-header-content {
   border-top: 1px solid var(--orange);

@@ -46,36 +46,36 @@
             markers: false, // Set to true for debugging
           },
         });
-        //  Selected projects section
-        gsap.to(".gsap-selected", {
-          x: "0%",
-          rotation: 360,
-          ease: "power1.out",
-          duration: 0.6,
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-projects",
-            start: "top 65%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
+        // //  Selected projects section
+        // gsap.to(".gsap-selected", {
+        //   x: "0%",
+        //   rotation: 360,
+        //   ease: "power1.out",
+        //   duration: 0.6,
+        //   stagger: { amount: 0.2 },
+        //   scrollTrigger: {
+        //     trigger: ".section-home-projects",
+        //     start: "top 65%", // When section top hits bottom of viewport
+        //     end: "top ", // When section center hits center of viewport
+        //     scrub: true, // Link animation to scroll progress
+        //     markers: false, // Set to true for debugging
+        //   },
+        // });
 
-        gsap.to(".gsap-projects", {
-          x: "0%",
-          rotation: -360,
-          ease: "power1.out",
-          duration: 0.6,
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-projects",
-            start: "top 60%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
+        // gsap.to(".gsap-projects", {
+        //   x: "0%",
+        //   rotation: -360,
+        //   ease: "power1.out",
+        //   duration: 0.6,
+        //   stagger: { amount: 0.2 },
+        //   scrollTrigger: {
+        //     trigger: ".section-home-projects",
+        //     start: "top 60%", // When section top hits bottom of viewport
+        //     end: "top ", // When section center hits center of viewport
+        //     scrub: true, // Link animation to scroll progress
+        //     markers: false, // Set to true for debugging
+        //   },
+        // });
 });
 const tl = gsap.to;
 /* Progress Event */
@@ -105,7 +105,7 @@ window.addEventListener("progressEvent", (e) => {
           scrollTrigger: {
             trigger: ".about-image-wrapper",
             start: "top top", // start animation when section hits top
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
           y: -50,
           opacity: 0,
@@ -125,7 +125,7 @@ window.addEventListener("progressEvent", (e) => {
           scrollTrigger: {
             trigger: ".section-home-projects",
             start: "top 100%", // start animation when section hits top
-            toggleActions: "play none none reverse",
+            toggleActions: "play none none none",
           },
           y: 50,
           opacity: 0,
@@ -138,23 +138,5 @@ window.addEventListener("progressEvent", (e) => {
         });
       });
 
-      // Scrub effect for words while scrolling
-      document.querySelectorAll("[null]").forEach((el) => {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: el,
-            // start animation near top of viewport
-            start: "top 90%",
-            // end animation when centre
-            end: "top center",
-            scrub: true,
-          },
-        });
-        tl.from(el.querySelectorAll(".null"), {
-          opacity: 0.2,
-          duration: 0.2,
-          ease: "power1.out",
-          stagger: { each: 0.4 },
-        });
-      });
+      
     
