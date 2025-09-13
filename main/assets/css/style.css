@@ -5122,12 +5122,12 @@ blockquote {
   height: 100vh;
 }
 .jason {
-  transform: translateX(0%);
+  
   display: inline-block !important;
   will-change: transform !important;
 }
 .githui {
-  transform: translateX(0%);
+ 
   display: inline-block !important;
   will-change: transform !important;
 }
@@ -5283,6 +5283,7 @@ blockquote {
   height: 20rem;
   position: absolute;
   opacity: 1;
+  border-radius: 40px;
   border: 1px solid #ee9622;
   bottom: 0;
   transform: rotate(0);
@@ -5340,7 +5341,7 @@ blockquote {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  
+   border-radius: 10%;
 }
 
 .header-container {
@@ -5363,18 +5364,17 @@ blockquote {
   text-transform: uppercase;
   margin-bottom: 0;
   font-family: Bueno, Impact, sans-serif;
-  font-size: 25vw;
+  font-size: 15vw;
   font-weight: 400;
   line-height: .9;
 }
 
 .header-content-wrapper {
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 
 .c-copyright {
@@ -5724,11 +5724,28 @@ html.has-scroll-dragging {
   font-size: 14rem;
   font-weight: 400;
   line-height: 1;
-  transform: translateX(58vw);
   will-change: transform !important;
   gap: 0.5rem;
+ animation: marquee 140s  linear infinite;
+  display: inline-block;
+}
+.smiley {
+  color: #6e4404;
+}
+.scroll-text span {
+  padding: 0 0rem;
+  user-select: none;
 }
 
+/* Keyframes for continuous leftward scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 .nav-menu-side {
   width: 50%;
   height: 100%;
@@ -6571,14 +6588,14 @@ html.has-scroll-dragging {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: #111;
+  background: #9b9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity .5s ease, visibility .5s;
+  transition: opacity .3s ease, visibility .4s;
   z-index: 9999;
 
-  scale: 2;
+  scale: 2.5;
 }
 
 .loader {
@@ -6616,10 +6633,10 @@ html.has-scroll-dragging {
     circle at 50% 50%,
     transparent 0%,
     transparent 10%,
-    black 25%
+    rgb(73, 72, 72) 25%
   );
   animation:
-    transform-animation 2s infinite alternate,
+    transform-animation 3s infinite alternate,
     opacity-animation 4s infinite;
   animation-timing-function: cubic-bezier(0.6, 0.8, 0.5, 1);
 }
@@ -6649,8 +6666,9 @@ html.has-scroll-dragging {
 .loader-letter {
   display: inline-block;
   opacity: 0;
-  animation: loader-letter-anim 4s infinite linear;
+  animation: loader-letter-anim 2s infinite linear;
   z-index: 2;
+  font-size: 30px;
 }
 
 .loader-letter:nth-child(1) {

@@ -27,7 +27,7 @@
   <meta content="summary_large_image" name="twitter:card" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="main/assets/css/style.css" rel="stylesheet" type="text/css" />
-   
+    <link rel="stylesheet" type="text/css" href="main/assets/css/locomotive-scroll.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/splitting/dist/splitting.css"
@@ -93,7 +93,7 @@
   </head>
 
   <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper" data-scroll-container>
       <!-- Preloader -->
        <div class="loader-wrapper" id="preloader">
   <span class="loader-letter">J</span>
@@ -121,10 +121,10 @@ window.onload = () => {
 };
        </script>
 
-      <!-- <div id="particles-js"></div> -->
+      <!-- <div id="particles-js"></div> -->  
 
-      <main class="main-wrapper home">
-        <header class="section-home-header" id="header">
+      <main class="main-wrapper home" data-scroll>
+        <header class="section-home-header" id="header" data-scroll>
           <video
             autoplay
             muted
@@ -295,6 +295,7 @@ window.onload = () => {
           </div>
           <div class="w-layout-grid header-component-grid">
             <div
+            
               id="w-node-_29911882-7cfd-620b-77b0-ea6d2e344fa7-dbd7b6ca"
               class="header-image-block"
             >
@@ -495,13 +496,12 @@ window.onload = () => {
                 </div>
               </div>
             </div>
-            <div
+            <div data-scroll 
               id="w-node-e95c3812-84bd-b2a5-3564-7e2a87f70593-dbd7b6ca"
               class="header-content-wrapper"
             >
               <h1 class="heading-header">
-                <span class="jason">JASON</span
-                ><span class="githui">GITHUI</span>
+                <span  data-scroll-speed="2" class="jason">JASON</span><span data-scroll-speed="1" data-scroll-orientation="horizontal" class="githui">GITHUI</span>
               </h1>
               <div class="c-copyright">©</div>
             </div>
@@ -541,7 +541,7 @@ window.onload = () => {
             </div>
           </div>
         </header>
-        <section
+        <section data-scroll data-scroll-speed="0.5"
           data-w-id="5ddc5a6a-39ae-65d0-85ff-361b0e8556bf"
           class="section-home-intro"
         >
@@ -551,33 +551,33 @@ window.onload = () => {
           >
             <div class="scroll-hero-text-item">
               <h2 class="scroll-text">
-                Trusted by fast-growing UK businesses
+            
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
+    <span>Trusted by fast-growing UK businesses <span class="smiley">^-^</span></span>
               </h2>
-              <span class="word1" data-word="Trusted" style="--word-index: 0"
-                >Trusted</span
-              ><span class="whitespace"> </span
-              ><span class="word2" data-word="by" style="--word-index: 1"
-                >by</span
-              ><span class="whitespace"> </span
-              ><span
-                class="word3"
-                data-word="fast-growing"
-                style="--word-index: 2"
-                >fast-growing</span
-              ><span class="whitespace"> </span
-              ><span class="word4" data-word="UK" style="--word-index: 3"
-                >UK</span
-              ><span class="whitespace"> </span
-              ><span class="word5" data-word="businesses" style="--word-index: 4"
-                >businesses</span
-              >
-             
-             
+             <!-- <img
+              src="main/assets/right-arrow.webp"
+              loading="lazy" alt="AI systems | AI Automation" class="ai-woman rotat1"  /> -->
              
             </div>
           </div>
         </section>
-        <section class="section-home-about">
+        <section class="section-home-about" data-scroll >
           <div class="padding-global">
             <div class="container-large">
               <div class="padding-section-large">
@@ -675,7 +675,7 @@ window.onload = () => {
             </div>
           </div>
         </section>
-        <section class="section-home-projects">
+        <section class="section-home-projects" data-scroll>
           <div class="padding-global">
             <div class="container-large">
               <div class="spacer-xhuge"></div>
@@ -889,7 +889,7 @@ window.onload = () => {
           </div>
           <div class="spacer-xxhuge"></div>
         </section>
-        <section class="section-home-services">
+        <section class="section-home-services" data-scroll>
           <div class="padding-global">
             <div class="container-large">
               <div class="padding-section-large">
@@ -1140,7 +1140,7 @@ window.onload = () => {
             </div>
           </div>
         </section>
-        <section class="call-to-action">
+        <section class="call-to-action" data-scroll>
           <div
             data-w-id="f03af6a9-fb62-4ad3-57d4-9eeaf556d72a"
             class="cta-component"
@@ -1240,7 +1240,7 @@ window.onload = () => {
           </div>
         </section>
       </main>
-      <footer class="footer">
+      <footer class="footer" data-scroll>
         <div class="padding-global">
           <div class="container-large">
             <div class="footer-padding">
@@ -1447,8 +1447,9 @@ window.onload = () => {
       src="main/assets/js/index.js"
       type="text/javascript"
     ></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
     <!-- <script src="main/assets/js/locomotive-scroll.min.js"></script> -->
+
     <!-- GSAP AND SCROLL TRIGGER -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
@@ -1465,195 +1466,37 @@ window.onload = () => {
         v.play();
       });
     </script>
-    <script>
-      // use a script tag or an external JS file
-      gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+    <script src="main/assets/js/gsap.js" type="text/javascript"></script>
+     
 
-      document.addEventListener("DOMContentLoaded", (event) => {
-        // gsap code here!
-        gsap.to(".jason", {
-          x: "-70vw",
-          ease: "power2.out",
-        
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-intro",
-            start: "top 100%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-
-        gsap.to(".scroll-text", {
-          x: "-115vw",
-          ease: "power2.out",
-         
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-about",
-            start: "top 100%", // When section top hits bottom of viewport
-            end: "top 20%  ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-        
-
-        
-        
-
-        gsap.to(".githui", {
-          x: "75vw",
-          ease: "power2.out",
-         
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-intro",
-            start: "top 100%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-
-        gsap.to(".c-copyright", {
-          x: "95vw",
-          ease: "power2.out",
-          
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-intro",
-            start: "top 100%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-
-        gsap.to(".header-image-block", {
-          y: "65vh",
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: ".section-home-intro",
-            start: "top 100%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-        //  Selected projects section
-        gsap.to(".gsap-selected", {
-          x: "0%",
-          rotation: 360,
-          ease: "power1.out",
-          duration: 0.6,
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-projects",
-            start: "top 65%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-
-        gsap.to(".gsap-projects", {
-          x: "0%",
-          rotation: -360,
-          ease: "power1.out",
-          duration: 0.6,
-          stagger: { amount: 0.2 },
-          scrollTrigger: {
-            trigger: ".section-home-projects",
-            start: "top 60%", // When section top hits bottom of viewport
-            end: "top ", // When section center hits center of viewport
-            scrub: true, // Link animation to scroll progress
-            markers: false, // Set to true for debugging
-          },
-        });
-
-        // Split text into characters
-        Splitting();
-      }); // Create ScrollTrigger for each fade-in-random element
-
-      Splitting();
-
-      //negative Y Smooth entrance of each character with opacity fade and randomized stagger as the section hits the top of the viewport.
-      document.querySelectorAll(".fade-in-random").forEach((el) => {
-        const chars = el.querySelectorAll(".word");
-
-        gsap.from(chars, {
-          scrollTrigger: {
-            trigger: ".about-image-wrapper",
-            start: "top top", // start animation when section hits top
-            toggleActions: "play none none reverse",
-          },
-          y: -50,
-          opacity: 0,
-          duration: 0.4,
-          ease: "power1.out",
-          stagger: {
-            amount: 0.5,
-            from: "random",
-          },
-        });
-      });
-      //Positive Y Smooth entrance of each character with opacity fade and randomized stagger as the section hits the top of the viewport.
-      document.querySelectorAll(".fade-about-text").forEach((el) => {
-        const aboutWords = el.querySelectorAll(".word");
-
-        gsap.from(aboutWords, {
-          scrollTrigger: {
-            trigger: ".section-home-projects",
-            start: "top 100%", // start animation when section hits top
-            toggleActions: "play none none reverse",
-          },
-          y: 50,
-          opacity: 0,
-          duration: 0.3,
-          ease: "power1.out",
-          stagger: {
-            amount: 0.5,
-            from: "random",
-          },
-        });
-      });
-
-      // Scrub effect for words while scrolling
-      document.querySelectorAll("[null]").forEach((el) => {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: el,
-            // start animation near top of viewport
-            start: "top 90%",
-            // end animation when centre
-            end: "top center",
-            scrub: true,
-          },
-        });
-        tl.from(el.querySelectorAll(".null"), {
-          opacity: 0.2,
-          duration: 0.2,
-          ease: "power1.out",
-          stagger: { each: 0.4 },
-        });
-      });
-    </script>
     
   
-   
-    <!-- JS Logic -->
-    <!-- <script>
+
+     <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const scroll = new LocomotiveScroll({
-        el: document.querySelector("[data-scroll-container]"),
-        smooth: true,
-        lerp: 0.08,
-      });
+     const locomotiveScroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      lerp: 0.1,
+      multiplier: 1.2,
+      class: "is-reveal", // Class applied to elements when they enter the viewport
+      reloadOnContextChange: true, // Reload on context change (e.g., window resize)
+      getDirection: true, // Enable scroll direction detection
+      getSpeed: true, // Enable scroll speed detection
+      smartphone: {
+        smooth: true, // Enable smooth scrolling on smartphones
+        breakpoint: 0, // Breakpoint for smartphones (0 means always enabled)
+      },
+      tablet: {
+        smooth: true, // Enable smooth scrolling on tablets
+        breakpoint: 0, // Breakpoint for tablets (0 means always enabled)
+      },
+});
+    
 
      
     });
-  </script> -->
+   
+  </script>
   </body>
 </html>
