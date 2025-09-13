@@ -4,11 +4,13 @@
  
 
   document.addEventListener("DOMContentLoaded", (event) => {
+    ScrollTrigger.matchMedia({
+  // Desktop only
+  "(min-width: 769px)": function() {
         // gsap code here!
         gsap.to(".jason", {
           x: "-50vw",
           ease: "power2.out",
-          duration: 1,
           stagger: { amount: 0.2 },
           scrollTrigger: {
             trigger: ".section-home-intro",
@@ -22,7 +24,6 @@
         gsap.to(".githui", {
           x: "50vw",
           ease: "power2.out",
-          duration: 1,
           stagger: { amount: 0.2 },
           scrollTrigger: {
             trigger: ".section-home-intro",
@@ -48,7 +49,6 @@
         });
         gsap.to(".smiley", {
           rotation: 810,
-          duration: 1,
           ease: "power2.out",
           
           stagger: { amount: 0.2 },
@@ -65,7 +65,6 @@
           
           rotation: 360,
           ease: "power1.out",
-          duration: 0.6,
           stagger: { amount: 0.2 },
           scrollTrigger: {
             trigger: ".section-home-projects",
@@ -80,7 +79,6 @@
           
           rotation: -360,
           ease: "power1.out",
-          duration: 0.6,
           stagger: { amount: 0.2 },
           scrollTrigger: {
             trigger: ".section-home-projects",
@@ -90,6 +88,62 @@
             markers: false, // Set to true for debugging
           },
         });
+    },
+  // Mobile only
+  "(max-width: 768px)": function() {
+        // gsap code here!
+         gsap.to(".jason", {
+          x: "-50vw",
+          ease: "power2.out",
+          stagger: { amount: 0.2 },
+          scrollTrigger: {
+            trigger: ".section-home-intro",
+            start: "top 100%", 
+            end: "top ", 
+            scrub: true, // Link animation to scroll progress
+            markers: false, // Set to true for debugging
+          },
+        });
+
+        gsap.to(".githui", {
+          x: "50vw",
+          ease: "power2.out",
+          stagger: { amount: 0.2 },
+          scrollTrigger: {
+            trigger: ".section-home-intro",
+            start: "top 100%", 
+            end: "top ", 
+            scrub: true, // Link animation to scroll progress
+            markers: false, // Set to true for debugging
+          },
+        });
+
+        gsap.to(".c-copyright", {
+          x: "95vw",
+          ease: "power2.out",
+          
+          stagger: { amount: 0.2 },
+          scrollTrigger: {
+            trigger: ".section-home-intro",
+            start: "top 100%", 
+            end: "top ", 
+            scrub: true, // Link animation to scroll progress
+            markers: false, // Set to true for debugging
+          },
+        });
+        gsap.to(".smiley", {
+          rotation: 270,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".section-home-intro",
+            start: "top 100%", 
+            end: "top ", 
+            scrub: true, // Link animation to scroll progress
+            markers: false, // Set to true for debugging
+          },
+        }); 
+    }
+    });
 });
 const tl = gsap.to;
 /* Progress Event */
