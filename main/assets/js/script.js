@@ -30204,7 +30204,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30230,7 +30230,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30251,7 +30251,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30277,7 +30277,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30298,7 +30298,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30324,7 +30324,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30345,7 +30345,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30371,7 +30371,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "",
+                          easing: "inOutCirc",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -31603,7 +31603,7 @@
                         config: {
                           delay: 0,
                           easing: "",
-                          duration: 500,
+                          duration: 200,
                           target: {
                             useEventTarget: "CHILDREN",
                             selector: ".cta-image._02",
@@ -31625,7 +31625,7 @@
                         config: {
                           delay: 0,
                           easing: "",
-                          duration: 500,
+                          duration: 200,
                           target: {
                             useEventTarget: "CHILDREN",
                             selector: ".cta-image._03",
@@ -31647,7 +31647,7 @@
                         config: {
                           delay: 0,
                           easing: "",
-                          duration: 500,
+                          duration: 200,
                           target: {
                             useEventTarget: "CHILDREN",
                             selector: ".cta-image._04",
@@ -31669,7 +31669,7 @@
                         config: {
                           delay: 0,
                           easing: "",
-                          duration: 500,
+                          duration: 200,
                           target: {
                             useEventTarget: "CHILDREN",
                             selector: ".cta-image._05",
@@ -31909,6 +31909,7 @@
             ],
             createdOn: 0x19363a3f5d3,
           },
+          
           "a-54": {
             id: "a-54",
             title: "CTA Animation - Mobile",

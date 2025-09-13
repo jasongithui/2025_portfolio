@@ -103,8 +103,8 @@ window.addEventListener("progressEvent", (e) => {
 
         gsap.from(chars, {
           scrollTrigger: {
-            trigger: ".about-image-wrapper",
-            start: "top top", // start animation when section hits top
+            trigger: ".fade-in-random",
+            start: "top 50%", // start animation when section hits top
             toggleActions: "play none none none",
           },
           y: -50,
@@ -123,7 +123,7 @@ window.addEventListener("progressEvent", (e) => {
 
         gsap.from(aboutWords, {
           scrollTrigger: {
-            trigger: ".section-home-projects",
+            trigger: ".button-scroll",
             start: "top 100%", // start animation when section hits top
             toggleActions: "play none none none",
           },
@@ -136,7 +136,9 @@ window.addEventListener("progressEvent", (e) => {
             from: "random",
           },
         });
-      });
+     
+    });
 
+   
       
     
