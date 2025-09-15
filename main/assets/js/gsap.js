@@ -48,18 +48,19 @@
           },
         });
         gsap.to(".smiley", {
-          rotation: 810,
+          rotation: 450,
           ease: "power2.out",
           
           stagger: { amount: 0.2 },
           scrollTrigger: {
-            trigger: ".section-home-intro",
+            trigger: ".section-home-about",
             start: "top 100%", 
-            end: "top ", 
+            end: "top 5%", 
             scrub: true, // Link animation to scroll progress
             markers: false, // Set to true for debugging
           },
         });
+         
         //  Selected projects section
         gsap.to(".gsap-selected", {
           
