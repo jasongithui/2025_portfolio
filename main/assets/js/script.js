@@ -30204,7 +30204,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30230,7 +30230,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30251,7 +30251,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30277,7 +30277,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30298,7 +30298,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30324,7 +30324,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30345,7 +30345,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
@@ -30371,7 +30371,7 @@
                         actionTypeId: "TRANSFORM_ROTATE",
                         config: {
                           delay: 0,
-                          easing: "inOutCirc",
+                          easing: "",
                           duration: 500,
                           target: {
                             useEventTarget: "CHILDREN",
