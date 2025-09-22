@@ -5167,6 +5167,9 @@ blockquote {
   z-index: -1; /* Send behind content */
   opacity: 0.8; /* Optional: slight transparency */
 }
+.lottie_3d {
+  width: 250px;
+}
 #particles-js {
   position: absolute;
   width: 100%;
@@ -6465,10 +6468,7 @@ html.has-scroll-dragging {
 
 ._3d-face {
   transform-origin: 100%;
-  background-image: url("https://cdn.prod.website-files.com/67380e56dab71fc4dbd7b6c9/67380e56dab71fc4dbd7b6d3_image.svg");
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f3f2f24d;
   width: 28rem;
   height: 14rem;
   position: absolute;
