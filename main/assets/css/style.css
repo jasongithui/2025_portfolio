@@ -8207,8 +8207,15 @@ html.has-scroll-dragging {
   .stats-grid {
     grid-row-gap: 2rem;
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
-
+.lottie-width {
+  width: 150px;
+}
+.lottie-width-300 {
+  width: 150px;
+}
   .about-content-grid {
     grid-row-gap: 1.25rem;
     grid-template-columns: 1fr;
@@ -8575,11 +8582,16 @@ html.has-scroll-dragging {
   }
 
   #w-node-_37b78ce8-6c56-439d-e460-72774bac88e2-4bac888f {
-    justify-self: center;
+    justify-self: flex-start;
   }
 
   #w-node-_37b78ce8-6c56-439d-e460-72774bac88f5-4bac888f {
-    place-self: center;
+        place-self: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+
   }
 
   #w-node-_24d89bad-b0f6-c9f0-9f0b-6a53457c030e-dbd7b6dd {
