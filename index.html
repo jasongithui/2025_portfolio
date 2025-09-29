@@ -111,38 +111,7 @@
 
   <body>
     <div class="page-wrapper" data-scroll-container>
-      <!-- Preloader -->
-       <style>
-        /* preloader */
-.loader-wrapper {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: #dadada;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity .3s ease, visibility .4s;
-  z-index: 9999;
 
-  scale: 2;
-}
-
-
-       </style>
-       <div class="loader-wrapper">
-        <div id="preloader" style="width: 200px;"> </div>
-       </div>
-       <!-- Preloader -->
-       <script>
-        // Wait until everything loads
-window.onload = () => {
-  document.getElementsByClassName("loader-wrapper")[0].style.opacity = "0";
-  setTimeout(() => {
-    document.getElementsByClassName("loader-wrapper")[0].style.display = "none";
-  }, 1000);
-};
-       </script>
 
       <!-- <div id="particles-js"></div> -->  
 
