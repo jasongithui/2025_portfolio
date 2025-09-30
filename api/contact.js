@@ -19,6 +19,8 @@ export default async function handler(req, res) {
   });
 
   try {
+    // Optional: test connection first
+    await transporter.verify();
     // 1. Notify site owner
     await transporter.sendMail({
       from: `"Website Contact" <${process.env.ZOHO_EMAIL}>`,
@@ -45,7 +47,11 @@ export default async function handler(req, res) {
 
     res.status(200).json({ message: "Thanks! Confirmation sent to your email." });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Error sending message. Please try again later." });
-  }
+  console.error("Email sending failed:", error);
+  return res.status(500).json({ 
+    success: false, 
+    message: "Error sending message. Please try again later.",
+    error: error.message // 👈 add this for better debugging
+  });
+}
 }
