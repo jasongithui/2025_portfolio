@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     port: 465,
     secure: true,
     auth: {
-      user: process.env.ZOHO_EMAIL,
+      user: process.env.ZOHO_USER,
       pass: process.env.ZOHO_PASS, // Use app password
     },
   });
@@ -25,8 +25,8 @@ console.log('DEBUG: ZOHO_PASS set?', !!process.env.ZOHO_PASS);
     await transporter.verify();
     // 1. Notify site owner
     await transporter.sendMail({
-      from: `"Website Contact" <${process.env.ZOHO_EMAIL}>`,
-      to: process.env.ZOHO_EMAIL,
+      from: `"Website Contact" <${process.env.ZOHO_USER}>`,
+      to: process.env.ZOHO_USER,
       subject: `New Contact Form: ${subject}`,
       text: `From: ${name} <${email}>\n\n${message}`,
     });
@@ -34,7 +34,7 @@ console.log('DEBUG: ZOHO_PASS set?', !!process.env.ZOHO_PASS);
     
     // 2. Auto-confirmation to visitor
     await transporter.sendMail({
-      from: `"Jason Githui Consulting" <${process.env.ZOHO_EMAIL}>`,
+      from: `"Jason Githui Consulting" <${process.env.ZOHO_USER}>`,
       to: email,
       subject: "Thanks for contacting Jason Githui 🚀",
       html: `
