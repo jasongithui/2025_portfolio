@@ -17,6 +17,8 @@ export default async function handler(req, res) {
       pass: process.env.ZOHO_PASS, // Use app password
     },
   });
+console.log('DEBUG: ZOHO_USER set?', !!process.env.ZOHO_USER);
+console.log('DEBUG: ZOHO_PASS set?', !!process.env.ZOHO_PASS);
 
   try {
     // Optional: test connection first
