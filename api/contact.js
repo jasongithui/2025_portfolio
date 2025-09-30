@@ -42,11 +42,11 @@ console.log('DEBUG: ZOHO_PASS set?', !!process.env.ZOHO_PASS);
         <p>Thank you for contacting <b>Jason Githui Consulting</b>. 
         Your message has been received and I’ll get back to you shortly.</p>
         <p>Meanwhile, here’s something useful for you:</p>
-        <p>👉 <a href="https://jasongithui.co.uk/blog/ai-integration">How AI Integration Helps Businesses Scale</a></p>
+        <p>👉 <a href="https://jasongithui.co.uk/main/assets/pages/blog.html">How AI Integration Helps Businesses Scale</a></p>
         <p>Best regards,<br>Jason Githui</p>
       `,
     });
-
+    console.log("Contact form email sent to visitor.");
     res.status(200).json({ message: "Thanks! Confirmation sent to your email." });
   } catch (error) {
   console.error("Email sending failed:", error);
