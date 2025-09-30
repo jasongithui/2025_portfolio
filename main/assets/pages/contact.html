@@ -391,17 +391,96 @@
                             Send Message
                           </button>
                         </form>
-                        <div id="response" class="form-message-success w-form-done">
-                          <div>
-                            Thank you! Your submission has been received!
-                          </div>
-                        </div>
-                        <div class="form-message-error w-form-fail">
-                          <div>
-                            Oops! Something went wrong while submitting the
-                            form.
-                          </div>
-                        </div>
+                        <!-- Success Popup -->
+<div id="success-popup" class="popup">
+  <div class="popup-content">
+    <span class="close-btn" id="close-popup">&times;</span>
+    <h2>✅ Message Sent</h2>
+    <p>Thanks for reaching out! A confirmation has been sent to your email.</p>
+  </div>
+</div>
+<div id="fail-popup" class="fail-popup">
+  <div class="fail-popup-content">
+    <span class="close-btn" id="close-popup">&times;</span>
+    <h2>❌ Message Not Sent</h2>
+    <p>Sorry, there was an error sending your message. Please try again.</p>
+  </div>
+</div>
+
+<style>
+  /* Popup container */
+  .popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .fail-popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: scaleUp 0.3s ease;
+  }
+  .fail-popup-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    animation: scaleUp 0.3s ease;
+  }
+  .popup-content h2 {
+    margin: 0 0 1rem;
+    color: #2e7d32;
+  }
+  .fail-popup-content h2 {
+    margin: 0 0 1rem;
+    color: #d32f2f;
+  }
+  .popup-content p {
+    margin: 0;
+    color: #333;
+  }
+  .fail-popup-content p {
+    margin: 0;
+    color: #333;
+  }
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 29px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  @keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+</style>
+                        
+                       
                       </div>
                     </div>
                   </div>
@@ -824,7 +903,9 @@
     <script type="module" src="../js/lottie.js"></script>
 <script>
   const form = document.getElementById("contactForm");
-  const responseDiv = document.getElementById("response");
+  const popup = document.getElementById("success-popup");
+  const failPopup = document.getElementById("fail-popup");
+  const closePopup = document.getElementById("close-popup");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -844,10 +925,30 @@
       });
 
       const data = await res.json();
-      responseDiv.textContent = data.message || "Message sent!";
+      if (res.ok && data.success !== false) {
+        form.reset();              
+        popup.style.display = "flex";  // show popup
+
+        // auto-close after 5 seconds
+        setTimeout(() => {
+          popup.style.display = "none";
+        }, 5000);
+      } else {
+        failPopup.style.display = "flex";  // show fail popup
+      }
     } catch (error) {
-      responseDiv.textContent = "Something went wrong. Try again later.";
+      alert("Error: " + error.message);
     }
+  });
+
+  // Close popup manually
+  closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+  });
+
+  // Close if user clicks outside popup content
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) popup.style.display = "none";
   });
 </script>
   <script
