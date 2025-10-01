@@ -925,6 +925,7 @@
       });
 
       const data = await res.json();
+      
       if (res.ok && data.success !== false) {
         form.reset();              
         popup.style.display = "flex";  // show popup
