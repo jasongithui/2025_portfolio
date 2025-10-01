@@ -43,8 +43,8 @@ console.log('DEBUG: ZOHO_PASS set?', !!process.env.ZOHO_PASS);
         Your message has been received and I’ll get back to you shortly.</p>
         <p>Meanwhile, here’s something useful for you:</p>
         <p>👉 <a href="https://youtu.be/reUZRyXxUs4">How AI Could Empower Any Business</a></p>
-        <p>Best regards,<br>AI Consultant</p>
-        <p>Jason Githui</p> 
+        <p>Best regards,<br>AI Consultant,</p>
+        <p><b>Jason Githui</b></p>
       `,
     });
     console.log("Contact form email sent to visitor.");
