@@ -916,7 +916,7 @@
       subject: form.subject.value,
       message: form.message.value,
     };
-
+    form.reset();
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -925,8 +925,9 @@
       });
 
       const data = await res.json();
+      
       if (res.ok && data.success !== false) {
-        form.reset();              
+                      
         popup.style.display = "flex";  // show popup
 
         // auto-close after 5 seconds
