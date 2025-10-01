@@ -34,16 +34,16 @@ console.log('DEBUG: ZOHO_PASS set?', !!process.env.ZOHO_PASS);
     
     // 2. Auto-confirmation to visitor
     await transporter.sendMail({
-      from: `"Jason Githui Consulting" <${process.env.ZOHO_USER}>`,
+      from: `"Jason Githui AI Consulting" <${process.env.ZOHO_USER}>`,
       to: email,
       subject: "Thanks for contacting Jason Githui 🚀",
       html: `
         <p>Hi ${name},</p>
-        <p>Thank you for contacting <b>Jason Githui Consulting</b>. 
+        <p>Thank you for contacting <b>Jason Githui AI Consulting</b>. 
         Your message has been received and I’ll get back to you shortly.</p>
         <p>Meanwhile, here’s something useful for you:</p>
-        <p>👉 <a href="https://jasongithui.co.uk/main/assets/pages/blog.html">How AI Integration Helps Businesses Scale</a></p>
-        <p>Best regards,<br>Jason Githui</p>
+        <p>👉 <a href="https://youtu.be/reUZRyXxUs4">How AI Could Empower Any Business</a></p>
+        <p>Best regards,<br>AI Consultant<br>Jason Githui</p>
       `,
     });
     console.log("Contact form email sent to visitor.");
