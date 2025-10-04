@@ -117,17 +117,61 @@
 
       <main class="main-wrapper home" data-scroll>
         <header class="section-home-header" id="header" data-scroll>
-          <video
-            autoplay
-            muted
-            loop
-            playsinline
-            class="background-video"
-            id="bg-video"
-          >
-            <source src="https://res.cloudinary.com/dxnyslvh8/video/upload/v1757529009/partcles-code_ovapgn.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+                          <div class="video-background">
+                  <video autoplay muted loop playsinline poster="main/assets/management consulting.png" id="bg-video">
+                    <source src="https://res.cloudinary.com/dxnyslvh8/video/upload/v1757529009/partcles-code_ovapgn.mp4"
+                      type="video/mp4">
+                    <!-- optional: <source src="background.webm" type="video/webm"> -->
+                    Your browser does not support HTML5 video.
+                  </video>
+                  <!-- Overlay element -->
+                  <div class="overlay"></div>
+                  <!-- fallback image (absolute positioned) -->
+                  <img src="https://res.cloudinary.com/dxnyslvh8/image/upload/v1759585559/Screenshot_2025-10-04_164415_bxokyr.png" alt="Background fallback" class="video-fallback" />
+                </div>
+                <script>
+                  const video = document.getElementById("bg-video");
+                  const container = document.querySelector(".video-background");
+
+                  video.addEventListener("canplaythrough", () => {
+                    container.classList.add("video-loaded");
+                  });
+
+                </script>
+
+<style>
+  
+  .video-background {
+  position: absolute;
+  /* display: none; */
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #000000; /* fallback bg color */
+}
+
+.video-background video,
+.video-background .video-fallback {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop nicely */
+}
+
+/* fallback initially visible */
+.video-fallback {
+  z-index: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* once video is ready, hide fallback */
+.video-loaded .video-fallback {
+  opacity: 0;
+}
+</style>
+          
           <div
             data-animation="default"
             class="nav w-nav"
